@@ -1,0 +1,43 @@
+#footer {
+  margin-top: 30px;
+  background-color: #31363C;
+}
+
+%contain-sn-logo {
+  height: 100%;
+  width: 100%;
+}
+
+.container-logo-footer {
+  width: 400px;
+  height: 300px;
+
+  .logo {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: contain;
+  }
+}
+
+.container-social-networks {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 10px;
+
+  .title-sn h3 {
+    text-align: center;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+    padding-left: 10px;
+  }
+
+  .container-sn {
+    width: 70px;
+    height: 70px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
