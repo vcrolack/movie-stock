@@ -3,3 +3,14 @@ body {
   color: #fff;
   background-color: #212529;
 }
+
+.btn-main {
+  background-color: #FDEC04;
+  &:hover {
+    background-color: #D3C400;
+  }
+}
+
+.bg-darkness {
+  background-color: #111315;
+}

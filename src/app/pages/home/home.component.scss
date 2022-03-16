@@ -1,3 +1,64 @@
 #main {
   min-height: 200px;
+
+  .welcome {
+    width: 100%;
+    min-height: 200px;
+    border-radius: 60px;
+    background-color: rgba(61, 60, 60, 0.8);
+    position: relative;
+    top: -100px;
+    z-index: 10;
+    box-shadow: 0px 8px 14px 3px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 8px 14px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 8px 14px 3px rgba(0,0,0,0.75);
+
+    @media (max-width: 990px) {
+      top: 10px;
+      height: 300px;
+    }
+
+    .container-img {
+      width: 500px;
+      height: 500px;
+
+      @media (max-width: 990px) {
+        height: 300px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  #services {
+    h3 {
+      color: #FDEC04;
+    }
+    .card-service {
+      min-height: 240px !important;
+    }
+  }
+
+  #auth-invitation {
+    .container-auth-invitation {
+      width: 50%;
+      border-radius: 20px;
+      background-color: rgba(61, 60, 60, 0.8);
+      box-shadow: 0px 8px 14px 3px rgba(0,0,0,0.75);
+      -webkit-box-shadow: 0px 8px 14px 3px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 8px 14px 3px rgba(0,0,0,0.75);
+      @media (max-width: 732px) {
+        width: 90%;
+      }
+    }
+
+    .container-info-auth {
+      min-height: 250px;
+    }
+
+
+  }
 }

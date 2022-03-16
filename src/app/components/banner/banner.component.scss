@@ -1,0 +1,43 @@
+#carousel {
+  @media (max-width: 990px) {
+    padding-top: 100px;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+
+  .container-description {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    position: relative;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+
+    .title-description-banner {
+      width: 500px;
+      margin-bottom: 10px;
+    }
+    .title-description-banner h2 {
+      font-size: 2.5rem;
+      @media(max-width: 320px) {
+        font-size: 1.5rem;
+      }
+    }
+    .p-description-banner {
+      width: 500px;
+      height: 100px;
+      font-size: 1.2rem;
+    }
+  }
+}

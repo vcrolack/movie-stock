@@ -11,6 +11,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { MoviesComponent } from './pages/movies/movies.component';
 import { CartComponent } from './components/cart/cart.component';
 import { BannerComponent } from './components/banner/banner.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { BannerComponent } from './components/banner/banner.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
