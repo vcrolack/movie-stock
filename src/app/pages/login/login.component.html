@@ -1,0 +1,47 @@
+<div class="container container-form">
+  <div class="container">
+    <form [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm.value)">
+      <div class="row d-flex justify-content-center">
+        <div class="container-name col-12 col-lg-6  d-flex justify-content-center pt-5">
+          <div class="container-input d-flex flex-column me-lg-5">
+            <div class="container-email">
+              <label for="">Email*</label>
+              <input formControlName="email" class="form-control" type="text">
+              <div class="validation-error">
+                <ng-container *ngFor="let validation of mensajesErrores.email">
+                  <div
+                    *ngIf="(loginForm.get('email')!.hasError(validation.type)) &&
+                    (loginForm.get('email')!.dirty || loginForm.get('email')!.touched)"
+                  >
+                    <p class="text-warning ">{{validation.message}}</p>
+                  </div>
+                </ng-container>
+              </div>
+            </div>
+            <div class="container-contrasena">
+              <label for="">contraseña*</label>
+              <input formControlName="contrasena" class="form-control" type="text">
+              <div class="validation-error">
+                <ng-container *ngFor="let validation of mensajesErrores.contrasena">
+                  <div
+                    *ngIf="(loginForm.get('contrasena')!.hasError(validation.type)) &&
+                    (loginForm.get('contrasena')!.dirty || loginForm.get('contrasena')!.touched)"
+                  >
+                  <p class="text-warning ">{{validation.message}}</p>
+                </div>
+                </ng-container>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="container-logo col-12 col-lg-6 d-flex justify-content-center align-items-start pt-5">
+          <img src="../../../assets/brand/logo_slogan.svg" alt="">
+        </div>
+      </div>
+      <div class="col-12 d-flex justify-content-center pt-5">
+        <button type="submit" class="btn btn-send text-dark">Registrarse</button>
+      </div>
+    </form>
+  </div>
+</div>
