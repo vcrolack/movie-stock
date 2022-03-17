@@ -1,1 +1,112 @@
-<p>register works!</p>
+<div class="container container-form">
+  <form [formGroup]="registerForm" (ngSubmit)="registerUser(registerForm.value)">
+    <div class="container-name col-12 col-lg-6  d-flex justify-content-center pt-5">
+
+      <div class="container-input d-flex flex-column me-lg-5">
+        <label for="">Nombre*</label>
+        <input formControlName="nombre" class="form-control" type="text">
+        <div class="validation-error">
+          <ng-container *ngFor="let validation of mensajesErrores.nombre">
+            <div
+              *ngIf="(registerForm.get('nombre')!.hasError(validation.type)) &&
+              (registerForm.get('nombre')!.dirty || registerForm.get('nombre')!.touched)"
+            >
+              <p class="text-warning ">{{validation.message}}</p>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+
+      <div class="container-input d-flex flex-column ms-lg-5">
+        <label for="">Apellido*</label>
+        <input formControlName="apellido" class="form-control" type="text">
+        <div class="validation-error">
+          <ng-container *ngFor="let validation of mensajesErrores.apellido">
+            <div
+              *ngIf="(registerForm.get('apellido')!.hasError(validation.type)) &&
+              (registerForm.get('apellido')!.dirty || registerForm.get('apellido')!.touched)"
+            >
+              <p class="text-warning ">{{validation.message}}</p>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+
+    </div>
+    <div class="container-name col-12 col-lg-6 d-flex justify-content-center pt-5">
+
+      <div class="container-input d-flex flex-column me-lg-5">
+        <label for="">Email*</label>
+        <input formControlName="email" class="form-control" type="text">
+        <div class="validation-error">
+          <ng-container *ngFor="let validation of mensajesErrores.email">
+            <div
+              *ngIf="(registerForm.get('email')!.hasError(validation.type)) &&
+              (registerForm.get('email')!.dirty || registerForm.get('email')!.touched)"
+            >
+              <p class="text-warning ">{{validation.message}}</p>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+
+      <div class="container-input d-flex flex-column ms-lg-5">
+        <label for="">Contraseña*</label>
+        <input formControlName="contrasena" class="form-control" type="text">
+        <div class="validation-error">
+          <ng-container *ngFor="let validation of mensajesErrores.contrasena">
+            <div
+              *ngIf="(registerForm.get('contrasena')!.hasError(validation.type)) &&
+              (registerForm.get('contrasena')!.dirty || registerForm.get('contrasena')!.touched)"
+            >
+            <p class="text-warning ">{{validation.message}}</p>
+          </div>
+          </ng-container>
+        </div>
+      </div>
+
+    </div>
+    <div class="container-name col-12 col-lg-6 d-flex justify-content-center pt-5">
+
+      <div class="container-input-site d-flex flex-column me-lg-5">
+        <label for="">Celular *</label>
+        <input placeholder="999999999" formControlName="celular" class="form-control" type="text">
+        <div class="validation-error">
+          <ng-container *ngFor="let validation of mensajesErrores.celular">
+            <div
+              *ngIf="(registerForm.get('celular')!.hasError(validation.type)) &&
+              (registerForm.get('celular')!.dirty || registerForm.get('celular')!.touched)"
+            >
+            <p class="text-warning ">{{validation.message}}</p>
+          </div>
+          </ng-container>
+        </div>
+      </div>
+
+      <div class="container-input-site d-flex flex-column ms-lg-5">
+        <label for="">Dirección*</label>
+        <input formControlName="direccion" class="form-control" type="text">
+        <div class="validation-error">
+          <ng-container *ngFor="let validation of mensajesErrores.direccion">
+            <div
+              *ngIf="(registerForm.get('direccion')!.hasError(validation.type)) &&
+              (registerForm.get('direccion')!.dirty || registerForm.get('direccion')!.touched)"
+            >
+            <p class="text-warning ">{{validation.message}}</p>
+          </div>
+          </ng-container>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-12 d-flex justify-content-center pt-5">
+      <button [disabled]="!registerForm.valid" type="submit" class="btn btn-send text-dark">Registrarse</button>
+    </div>
+  </form>
+
+  <ng-container>
+  </ng-container>
+
+
+</div>
