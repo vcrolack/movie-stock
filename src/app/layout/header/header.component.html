@@ -19,7 +19,14 @@
         <li class="nav-item d-inline-block"><a class="nav-link text-decoration-none text-light" href="#">Contacto</a></li>
         <button class="btn btn-main me-lg-2 me-0 mb-lg-0 mb-2"> <a class="text-decoration-none text-dark" routerLink="/iniciar-sesion">Iniciar sesión</a></button>
         <button class="btn btn-secondary"><a class="text-decoration-none text-light" routerLink="/registro">Registrarse</a></button>
+        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-secondary ms-lg-2">
+          <fa-icon [icon]="faShoppingCart"></fa-icon>
+        </button>
       </ul>
     </div>
   </nav>
 </header>
+
+
+
+<app-modal></app-modal>

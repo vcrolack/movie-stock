@@ -13,6 +13,8 @@ import { CartComponent } from './components/cart/cart.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +26,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     RegisterComponent,
     MoviesComponent,
     CartComponent,
-    BannerComponent
+    BannerComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

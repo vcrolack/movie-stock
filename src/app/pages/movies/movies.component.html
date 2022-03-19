@@ -1,1 +1,22 @@
-<p>movies works!</p>
+<div class="container container-movies">
+  <div class="row d-flex justify-content-center">
+    <ng-container *ngFor="let movie of movies">
+      <div class="card bg-darkness m-lg-3" style="width: 18rem;">
+        <div class="container-img">
+          <img src={{movie.urlImage}} class="card-img-top" alt="Caratura de {{movie.name}}">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{movie.name}}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item bg-dark text-light">Género: {{movie.genre}}</li>
+          <li class="list-group-item bg-dark text-light">Año: {{movie.year}}</li>
+          <li class="list-group-item bg-dark text-light">Precio: {{movie.price | currency:'CLP' }}</li>
+        </ul>
+        <div class="card-body">
+          <button type="button" (click)="addCart(movie.id)" id="{{movie.id}}" href="#" class="btn btn-main"> <fa-icon [icon]="faPlus"></fa-icon> Agregar</button>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -1,1 +1,20 @@
-<p>cart works!</p>
+<table class="table text-light">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Precio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngIf="cart">
+      <ng-container *ngFor="let movie of cart">
+        <tr>
+          <td>{{movie.name}}</td>
+          <td>{{movie.price}}</td>
+        </tr>
+      </ng-container>
+    </ng-container>
+  </tbody>
+</table>
+<div>
+</div>
