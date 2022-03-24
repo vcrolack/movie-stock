@@ -7,9 +7,9 @@ El presente código contenido en este repositorio, consiste en el primera entreg
 En este avance se encuentra creada una maqueta inicial del sitio (con home, sección de películas, formulario de login, formulario de registro y un carrito desarrollado en fase muy temprana).
 La página está creada en Angular y está estilizada con Bootstrap y estilos propios.
 ### Observaciones
-1. Se desarrollará posteriormente un sistema de login para que el carro se muestre solo si está logueado en la aplicación.
-2. Al carrito le falta pulir detalles.
-3. Agradecido de recibir todo el feedback posible :)
+1. Se hacen los request a la siguiente api:
+
+        https://developers.themoviedb.org/3/getting-started/introduction
 ## Server de desarrollo
 Correr en la consola `ng serve` para iniciar el server de desarrollo. Por defecto se inicia `http://localhost:4200/`, por lo que en tu navegador entra a dicha URL. Si haces algún cambio en el código, automáticamente recargará la página para compilar la aplicación.
 ## Pre requisitos
