@@ -85,6 +85,28 @@
     </div>
   </section>
 
+  <section id="popular-movies">
+    <h2 class="text-center my-5">Películas populares</h2>
+    <div class="container mt-5 mt-lg-0">
+      <div class="row">
+        <ng-container *ngFor="let popularMovie of moviesArray">
+        <div class="col-12 col-lg-3">
+
+            <div class="card card-service bg-darkness mb-lg-0 mb-3"  style="width: 18rem;">
+              <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{popularMovie.poster_path}}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">{{popularMovie.original_title}}</h5>
+                <a routerLink="/movie/{{popularMovie.id}}" class="btn btn-main">Ver más</a>
+              </div>
+            </div>
+
+        </div>
+      </ng-container>
+      </div>
+
+    </div>
+  </section>
+
   <section id="auth-invitation">
     <div class="container container-auth-invitation my-5 p-5">
       <div class="row d-flex justify-content-center">
@@ -98,7 +120,6 @@
                 <button class="btn btn-main me-md-5 me-0">Iniciar sesión</button>
                 <button class="btn btn-secondary ms-md-5 me-0">Registrarse</button>
               </div>
-
             </div>
           </div>
         </div>

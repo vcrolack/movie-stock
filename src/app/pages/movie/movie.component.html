@@ -1,0 +1,20 @@
+<section id="popular-movies">
+  <div class="container container-movie d-flex justify-content-center">
+    <div class="row">
+      <div class="col-12">
+
+          <div class="card card-service bg-darkness mb-lg-0 mb-3"  style="width: 18rem;">
+            <ng-container *ngIf="movie">
+              <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">{{movie.original_title}}</h5>
+                <p>{{movie.overview}}</p>
+              </div>
+            </ng-container>
+            </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
